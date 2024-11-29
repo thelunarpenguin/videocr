@@ -29,7 +29,7 @@ class PredictedFrame:
                 # no word is predicted
                 continue
             _, _, block_num, *_, conf, text = word_data
-            block_num, conf = int(block_num), int(conf)
+            block_num, conf = int(float(block_num)), int(conf)
 
             # handle line breaks
             if block < block_num:
